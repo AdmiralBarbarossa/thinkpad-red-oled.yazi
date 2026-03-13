@@ -35,7 +35,7 @@ See the [Yazi flavor documentation](https://yazi-rs.github.io/docs/flavors/overv
 
 The flavor is MIT-licensed, and the included tmTheme is also MIT-licensed.
 
-Check the [LICENSE](https://www.google.com/search?q=LICENSE) and [LICENSE-tmtheme](https://www.google.com/search?q=LICENSE-tmtheme) file for more details.
+Check the [LICENSE](./LICENSE) and [LICENSE-tmtheme](./LICENSE-tmtheme) files for more details.
 
 ## 🛑 Disclaimer
 
