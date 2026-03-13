@@ -1,0 +1,122 @@
+"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+
+[mgr]
+cwd = { fg = "#b9162a", bold = true }
+find_keyword = { fg = "#b9162a", italic = true, bold = true }
+find_position = { fg = "#b9162a", bg = "reset", italic = true }
+marker_copied = { fg = "#dcdcdc", bg = "#222222" }
+marker_cut = { fg = "#b9162a", bg = "#b9162a" }
+marker_selected = { fg = "#b9162a", bg = "#b9162a" }
+border_symbol = "│"
+border_style = { fg = "#222222" }
+
+[tabs]
+active = { fg = "#000000", bg = "#b9162a", bold = true }
+inactive = { fg = "#dcdcdc", bg = "#222222" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[indicator]
+padding = { open = " ", close = " " }
+
+[mode]
+normal_main = { fg = "#000000", bg = "#b9162a", bold = true }
+normal_alt = { fg = "#b9162a", bg = "#222222" }
+select_main = { fg = "#000000", bg = "#dcdcdc", bold = true }
+select_alt = { fg = "#dcdcdc", bg = "#222222" }
+unset_main = { fg = "#dcdcdc", bg = "#222222", bold = true }
+unset_alt = { fg = "#222222", bg = "#000000" }
+
+[status]
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+perm_type = { fg = "#b9162a" }
+perm_read = { fg = "#dcdcdc" }
+perm_write = { fg = "#b9162a" }
+perm_exec = { fg = "#dcdcdc" }
+progress_label = { fg = "#ffffff", bold = true }
+progress_normal = { fg = "#b9162a", bg = "#222222" }
+progress_error = { fg = "#b9162a", bg = "#222222" }
+
+[input]
+border = { fg = "#222222" }
+title = { fg = "#b9162a" }
+value = { fg = "#dcdcdc" }
+selected = { bg = "#222222", fg = "#ffffff" }
+
+[confirm]
+border = { fg = "#222222" }
+title = { fg = "#b9162a" }
+body = { fg = "#dcdcdc" }
+btn_yes = { fg = "#000000", bg = "#b9162a", bold = true }
+btn_no = { fg = "#dcdcdc", bg = "#222222" }
+
+[tasks]
+border = { fg = "#222222" }
+title = { fg = "#b9162a" }
+hovered = { fg = "#ffffff", bg = "#222222", bold = true }
+
+[which]
+mask = { bg = "#000000" }
+cand = { fg = "#dcdcdc", bold = true }
+rest = { fg = "#222222" }
+desc = { fg = "#b9162a", italic = true }
+separator = "  "
+separator_style = { fg = "#222222" }
+
+[help]
+on = { fg = "#b9162a" }
+run = { fg = "#dcdcdc" }
+desc = { fg = "#222222" }
+hovered = { bg = "#222222", bold = true }
+footer = { fg = "#000000", bg = "#dcdcdc" }
+
+[filetype]
+rules = [
+    { mime = "image/*", fg = "#8d8d8d" },
+    { mime = "{audio,video}/*", fg = "#8d8d8d" },
+    { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#b9162a" },
+    { mime = "application/{pdf,doc,rtf,epub,eml,msg}", fg = "#dcdcdc" },
+    { mime = "vfs/{absent,stale}", fg = "#8d8d8d" },
+    { url = "*", is = "orphan", bg = "#b9162a", fg = "#000000" },
+    { url = "*", is = "exec", fg = "#b9162a", bold = true },
+    { url = "*", is = "link", fg = "#8d8d8d", italic = true },
+    { url = "*", is = "dummy", bg = "#b9162a", fg = "#000000" },
+    { url = "*/", is = "dummy", bg = "#b9162a", fg = "#000000" },
+    { url = "*", fg = "#dcdcdc" },
+    { url = "*/", fg = "#dcdcdc", bold = true },
+]
+
+[icon]
+dirs = [
+    { name = ".config", text = "", fg = "#b9162a" },
+    { name = ".git", text = "", fg = "#8d8d8d" },
+    { name = ".github", text = "", fg = "#dcdcdc" },
+    { name = ".npm", text = "", fg = "#dcdcdc" },
+    { name = "Desktop", text = "", fg = "#8d8d8d" },
+    { name = "Development", text = "", fg = "#b9162a" },
+    { name = "Documents", text = "", fg = "#8d8d8d" },
+    { name = "Downloads", text = "", fg = "#b9162a" },
+    { name = "Library", text = "", fg = "#8d8d8d" },
+    { name = "Movies", text = "", fg = "#8d8d8d" },
+    { name = "Music", text = "", fg = "#8d8d8d" },
+    { name = "Pictures", text = "", fg = "#8d8d8d" },
+    { name = "Public", text = "", fg = "#8d8d8d" },
+    { name = "Videos", text = "", fg = "#8d8d8d" },
+]
+conds = [
+    # Special files
+    { if = "orphan", text = "", fg = "#8d8d8d" },
+    { if = "link", text = "", fg = "#8d8d8d" },
+    { if = "block", text = "", fg = "#8d8d8d" },
+    { if = "char", text = "", fg = "#8d8d8d" },
+    { if = "fifo", text = "", fg = "#8d8d8d" },
+    { if = "sock", text = "", fg = "#8d8d8d" },
+    { if = "sticky", text = "", fg = "#8d8d8d" },
+    { if = "dummy", text = "", fg = "#b9162a" },
+    # Fallback
+    { if = "dir & hovered", text = "", fg = "#b9162a" },
+    { if = "dir", text = "", fg = "#8d8d8d" },
+    { if = "exec", text = "", fg = "#b9162a" },
+    { if = "!dir", text = "", fg = "#dcdcdc" },
+]
