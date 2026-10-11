@@ -15,7 +15,7 @@
 ## 🎨 Installation
 
 ```sh
-ya pkg add AdmiralBarbarossa/thinkpad-red-oled.yazi
+ya pkg add admiralbarbarossa/thinkpad-red-oled
 ```
 
 ## ⚙️ Usage
