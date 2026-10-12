@@ -1,5 +1,3 @@
-
-
 <div align="center">
   <img src="https://github.com/sxyazi/yazi/blob/main/assets/logo.png?raw=true" alt="Yazi logo" width="20%">
 </div>
@@ -25,11 +23,15 @@ To set it as your dark flavor, change the content of your `theme.toml` to:
 ```toml
 [flavor]
 dark = "thinkpad-red-oled"
+light = "thinkpad-red-oled" # optional
 ```
 
 Make sure your `theme.toml` doesn't contain anything other than `[flavor]`, unless you want to override certain styles of this flavor.
 
 See the [Yazi flavor documentation](https://yazi-rs.github.io/docs/flavors/overview) for more details.
+
+> [!NOTE]
+> For the OLED look, set your terminal background to `#000000`. Icons require a [Nerd Font](https://www.nerdfonts.com/).
 
 ## 📜 License
 
