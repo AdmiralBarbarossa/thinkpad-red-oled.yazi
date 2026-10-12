@@ -1,3 +1,5 @@
+#:schema https://yazi-rs.github.io/schemas/theme.json
+
 [mgr]
 cwd = { fg = "#b9162a", bold = true }
 find_keyword = { fg = "#b9162a", italic = true, bold = true }
@@ -5,6 +7,10 @@ find_position = { fg = "#b9162a", bg = "reset", italic = true }
 marker_copied = { fg = "#dcdcdc", bg = "#222222" }
 marker_cut = { fg = "#b9162a", bg = "#b9162a" }
 marker_selected = { fg = "#b9162a", bg = "#b9162a" }
+marker_marked = { fg = "#8d8d8d", bg = "#8d8d8d" }
+count_copied = { fg = "#000000", bg = "#8d8d8d" }
+count_cut = { fg = "#000000", bg = "#b9162a" }
+count_selected = { fg = "#000000", bg = "#ffffff" }
 border_symbol = "│"
 border_style = { fg = "#222222" }
 
@@ -49,6 +55,24 @@ body = { fg = "#dcdcdc" }
 btn_yes = { fg = "#000000", bg = "#b9162a", bold = true }
 btn_no = { fg = "#dcdcdc", bg = "#222222" }
 
+[spot]
+border = { fg = "#222222" }
+title = { fg = "#b9162a" }
+tbl_col = { fg = "#b9162a" }
+tbl_cell = { fg = "#ffffff", bg = "#222222" }
+
+[notify]
+title_info = { fg = "#dcdcdc" }
+title_warn = { fg = "#ffffff" }
+title_error = { fg = "#b9162a" }
+
+[pick]
+border = { fg = "#222222" }
+active = { fg = "#000000", bg = "#b9162a", bold = true }
+
+[cmp]
+border = { fg = "#222222" }
+
 [tasks]
 border = { fg = "#222222" }
 title = { fg = "#b9162a" }
@@ -56,21 +80,23 @@ hovered = { fg = "#ffffff", bg = "#222222", bold = true }
 
 [which]
 mask = { bg = "#000000" }
+border = { fg = "#222222" }
 cand = { fg = "#dcdcdc", bold = true }
-rest = { fg = "#222222" }
+rest = { fg = "#8d8d8d" }
 desc = { fg = "#b9162a", italic = true }
 separator = "  "
 separator_style = { fg = "#222222" }
 
 [help]
-on = { fg = "#b9162a" }
-run = { fg = "#dcdcdc" }
-desc = { fg = "#222222" }
+border = { fg = "#222222" }
+chord = { fg = "#b9162a" }
+action = { fg = "#dcdcdc" }
 hovered = { bg = "#222222", bold = true }
-footer = { fg = "#000000", bg = "#dcdcdc" }
 
 [filetype]
 rules = [
+    { url = "**/.*/", fg = "#8d8d8d", bold = true },
+    { url = "**/.*", fg = "#8d8d8d" },
     { mime = "image/*", fg = "#8d8d8d" },
     { mime = "{audio,video}/*", fg = "#8d8d8d" },
     { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#b9162a" },
